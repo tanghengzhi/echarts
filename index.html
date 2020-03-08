@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>智慧厕所数据可视化</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./fonts/icomoon.css">
+</head>
+
+<body>
+    <div class="viewport">
+        <div class="column">
+            <!--概览-->
+            <div class="overview panel">
+                <div class="inner">
+                    <div class="item">
+                        <h4>190</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #006cff"></i>
+                            设备总数
+                        </span>
+                    </div>
+                    <div class="item">
+                        <h4>180</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #6acca3"></i>
+                            在线数量
+                        </span>
+                    </div>
+                    <div class="item">
+                        <h4>10</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #6acca3"></i>
+                            离线数量
+                        </span>
+                    </div>
+                    <div class="item">
+                        <h4>8</h4>
+                        <span>
+                            <i class="icon-dot" style="color: #ed3f35"></i>
+                            异常设备
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--监控-->
+            <div class="monitor panel">
+                <div class="inner">
+                    <div class="tabs">
+                        <a href="javascript:;" data-index="0" class="active">故障设备监控</a>
+                       
+                    </div>
+                    <div class="content" style="display: block;">
+                        <div class="head">
+                            <span class="col">故障时间</span>
+                            <span class="col">设备代码</span>
+                            <span class="col">设备厕所</span>
+                        </div>
+                        <div class="marquee-view">
+                            <div class="marquee">
+                                <div class="row">
+                                    <span class="col">20180701</span>
+                                    <span class="col">1111111111111</span>
+                                    <span class="col">3#厕所</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190601</span>
+                                    <span class="col">2222222222222222222</span>
+                                    <span class="col">3#厕所</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190704</span>
+                                    <span class="col">333333333333333333</span>
+                                    <span class="col">3#厕所</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20180701</span>
+                                    <span class="col">44444444444444</span>
+                                    <span class="col">3#厕所</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190701</span>
+                                    <span class="col">555555555555555555</span>
+                                    <span class="col">3#厕所</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190701</span>
+                                    <span class="col">6666666666666666666</span>
+                                    <span class="col">3#厕所</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190701</span>
+                                    <span class="col">777777777777777777</span>
+                                    <span class="col">3#厕所</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190701</span>
+                                    <span class="col">8888888888888888888</span>
+                                    <span class="col">3#厕所</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190701</span>
+                                    <span class="col">99999999999999999999</span>
+                                    <span class="col">3#厕所</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="col">20190710</span>
+                                    <span class="col">0000000000000000000</span>
+                                    <span class="col">3#厕所</span>
+                                    <span class="icon-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <!--点位-->
+            <div class="point panel">
+                <div class="inner">
+                    <h3>蹲位使用量统计</h3>
+                    <div class="chart">
+                        <div class="pie"></div>
+                        <div class="data">
+                            <div class="item">
+                                <h4>251,21</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #ed3f35"></i>
+                                    总使用量
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>418</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #eacf19"></i>
+                                    月使用量
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <!-- 地图 -->
+            <div class="map">
+                <h3>
+                    <span class="icon-cube"></span>
+                    设备数据统计
+                </h3>
+                <div class="chart">
+                    <div class="geo"></div>
+                </div>
+            </div>
+            <!-- 用户 -->
+            <div class="users panel">
+                <div class="inner">
+                    <h3>今日使用统计</h3>
+                    <div class="chart">
+                        <div class="bar"></div>
+                        <div class="data">
+                            <div class="item">
+                                <h4>899</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #ed3f35"></i>
+                                    男厕
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>248</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #eacf19"></i>
+                                   女厕
+                                </span>
+                            </div>
+							<div class="item">
+                                <h4>248</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #eacf19"></i>
+                                   第三卫生间
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <!-- 数据 -->
+            <div class="order panel">
+                <div class="inner">
+                    <!-- 筛选 -->
+                    <div class="filter">
+                        <a href="javascript:;" data-key="day365" class="active">365天</a>
+                        <a href="javascript:;" data-key="day90">90天</a>
+                        <a href="javascript:;" data-key="day30">30天</a>
+                        <a href="javascript:;" data-key="day1">24小时</a>
+                    </div>
+                    <!-- 数据 -->
+                    <div class="data">
+                        <div class="item">
+                            <h4>1987</h4>
+                            <span>
+                                <i class="icon-dot" style="color: #ed3f35;"></i>
+                                男厕使用量
+                            </span>
+                        </div>
+                        <div class="item">
+                            <h4>9834</h4>
+                            <span>
+                                <i class="icon-dot" style="color: #eacf19;"></i>
+                                女厕使用量
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 销售额 -->
+            <div class="sales panel">
+                <div class="inner">
+                    <div class="caption">
+                        <h3>使用总量统计</h3>
+                        <a href="javascript:;" class="active" data-type="year">年</a>
+                        <a href="javascript:;" data-type="quarter">季</a>
+                        <a href="javascript:;" data-type="month">月</a>
+                        <a href="javascript:;" data-type="week">周</a>
+                    </div>
+                    <div class="chart">
+                        <div class="label">单位:次</div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 渠道 季度 -->
+            <div class="wrap">
+                <div class="channel panel">
+                    <div class="inner">
+                        <h3>厕所空气质量</h3>
+                        <div class="data">
+                            <div class="item">
+                                <h4>9 <small>℃</small></h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #6acca3"></i>
+                                    平均温度
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>62 <small>%</small></h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #6acca3"></i>
+                                    平均湿度
+                                </span>
+                            </div>
+						
+                        </div>
+                        <div class="data">
+                            <div class="item">
+                                <h4>2 <small>级</small></h4>
+                                <span>
+                                 <i class="icon-dot" style="color: #6acca3"></i>
+                                  臭味强度
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>0</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #6acca3"></i>
+                                    硫化氢
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="channel panel ">
+                    <div class="inner">
+                        <h3>当前统计</h3>
+                        <div class="data">
+                            <div class="item">
+                                <h4>9 <small>位</small></h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #ed3f35;"></i>
+                                    当前人数
+                                </span>
+                            </div>
+                            <div class="item">
+                                <h4>62 <small>位</small></h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #6acca3"></i>
+                                    剩余蹲位
+                                </span>
+                            </div>
+						
+                        </div>
+                        <div class="data">
+                            <div class="item">
+                               <!--  <h4>2 <small>级</small></h4>
+                                <span>
+                                 <i class="icon-dot" style="color: #6acca3"></i>
+                                  臭味强度
+                                </span> -->
+                            </div>
+                            <div class="item">
+                                <!-- <h4>0</h4>
+                                <span>
+                                    <i class="icon-dot" style="color: #6acca3"></i>
+                                    硫化氢
+                                </span> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 排行榜 -->
+            <div class="top panel">
+                <div class="inner">
+                    <div class="all">
+                        <h3>排行榜</h3>
+                        <ul>
+                            <li>
+                                <i class="icon-cup1" style="color: #d93f36;"></i>
+                                3#厕所
+                            </li>
+                            <li>
+                                <i class="icon-cup2" style="color: #68d8fe;"></i>
+                                8#厕所
+                            </li>
+                            <li>
+                                <i class="icon-cup3" style="color: #4c9bfd;"></i>
+                                11#厕所
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="province">
+                        <h3>各厕所排行 <i class="date">// 近30日 //</i></h3>
+                        <div class="data">
+                            <ul class="sup">
+                                <li>
+                                    <span> 2#厕所</span>
+                                    <span>25,179 <s class="icon-up"></s></span>
+                                </li>
+                                <li>
+                                    <span> 3#厕所</span>
+                                    <span>23,252 <s class="icon-down"></s></span>
+                                </li>
+                                <li>
+                                    <span> 8#厕所</span>
+                                    <span>20,760 <s class="icon-up"></s></span>
+                                </li>
+                                <li>
+                                    <span> 9#厕所</span>
+                                    <span>23,252 <s class="icon-down"></s></span>
+                                </li>
+                                <li>
+                                    <span> 11#厕所</span>
+                                    <span>20,760 <s class="icon-up"></s></span>
+                                </li>
+                            </ul>
+                            <ul class="sub">
+                             <li><span>数据</span><span> 数据<s class="icon-up"></s></span></li> 
+							  <li><span>数据</span><span> 数据<s class="icon-up"></s></span></li> 
+							   <li><span>数据</span><span> 数据<s class="icon-up"></s></span></li> 
+							    <li><span>数据</span><span> 数据<s class="icon-up"></s></span></li> 
+								 <li><span>数据</span><span> 数据<s class="icon-up"></s></span></li> 
+								  <li><span>数据</span><span> 数据<s class="icon-up"></s></span></li> 
+								   <li><span>数据</span><span> 数据<s class="icon-up"></s></span></li> 
+								    <li><span>数据</span><span> 数据<s class="icon-up"></s></span></li> 
+									 <li><span>数据</span><span> 数据<s class="icon-up"></s></span></li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="https://www.jq22.com/jquery/echarts-4.2.1.min.js"></script>
+<script src="./js/index.js"></script>
+
+<script src="./js/china.js"></script>
+<script src="./js/mymap.js"></script>
+
+</html>
