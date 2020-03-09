@@ -1,42 +1,74 @@
 var geoCoordMap = {
+    "欢乐世界": [117.127982,34.234232],
     '糖果世界': [117.130387,34.235391],
+    '欢乐水世界': [117.131404,34.23463],
+    "广场": [117.130453,34.234139],
+    "停车场所":[117.131459,34.23271],
+    "1#厕所":[117.127547,34.233762],
+    "2#厕所":[117.128396,34.233091],
+    "3#厕所":[117.129537,34.233986],
+    "4#厕所":[117.129339,34.23456],
+    "5#厕所":[117.128593,34.235172]
 };
 
-var GZData = [
-    [{
-        name: '糖果世界'
-    }, {
-        name: '糖果世界',
+var parkData = [
+    {
+        name: '欢乐世界',
         value: 100
-    }],
+    },
+    {
+        name: '糖果世界',
+        value: 100,
+
+    },
+    {
+        name: '欢乐水世界',
+        value: 100
+    },
+    {
+        name: '广场',
+        value: 100
+    },
+    {
+        name: '停车场所',
+        value: 100
+    }
+];
+var toiletData = [
+    {
+        name: '1#厕所',
+        value: 50,
+        tooltip: '剩余蹲位：20<br />正在使用：10<br />第三卫生间：占用<br />————————<br />温度：20<br />湿度:60%<br />空气质量：优'
+    },
+    {
+        name: '2#厕所',
+        value: 50,
+        tooltip: '剩余蹲位：20<br />正在使用：10<br />第三卫生间：占用<br />————————<br />温度：20<br />湿度:60%<br />空气质量：优'
+    },
+    {
+        name: '3#厕所',
+        value: 50,
+        tooltip: '剩余蹲位：20<br />正在使用：10<br />第三卫生间：占用<br />————————<br />温度：20<br />湿度:60%<br />空气质量：优'
+    },
+    {
+        name: '4#厕所',
+        value: 50,
+        tooltip: '剩余蹲位：20<br />正在使用：10<br />第三卫生间：占用<br />————————<br />温度：20<br />湿度:60%<br />空气质量：优'
+    },
+    {
+        name: '5#厕所',
+        value: 50,
+        tooltip: '剩余蹲位：20<br />正在使用：10<br />第三卫生间：占用<br />————————<br />温度：20<br />湿度:60%<br />空气质量：优'
+    },
 ];
 
-var planePath = 'path://M.6,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705';
-
-var convertData = function (data) {
-    var res = [];
-    for (var i = 0; i < data.length; i++) {
-        var dataItem = data[i];
-        var fromCoord = geoCoordMap[dataItem[0].name];
-        var toCoord = geoCoordMap[dataItem[1].name];
-        if (fromCoord && toCoord) {
-            res.push([{
-                coord: fromCoord
-            }, {
-                coord: toCoord
-            }]);
-        }
-    }
-    return res;
-};
-
-var color = ['#3ed4ff', '#ffa022', '#a6c84c'];
+var color = ['#3ed4ff', '#ffa022'];
 var series = [];
 [
-    ['新疆', GZData]
+    ['徐州乐园', parkData],
+    ['卫生间', toiletData]
 ].forEach(function (item, i) {
     series.push({
-        name: item[0] + ' Top10',
         type: 'effectScatter',
         coordinateSystem: 'geo',
         zlevel: 2,
@@ -60,8 +92,9 @@ var series = [];
         },
         data: item[1].map(function (dataItem) {
             return {
-                name: dataItem[1].name,
-                value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value])
+                name: dataItem.name,
+                value: geoCoordMap[dataItem.name].concat([dataItem.value]),
+                tooltip: dataItem.tooltip
             };
         })
     });
@@ -78,16 +111,6 @@ option = {
     tooltip: {
         trigger: 'item'
     },
-    legend: {
-        orient: 'vertical',
-        top: 'bottom',
-        left: 'right',
-        data: ['北京 Top10', '上海 Top10', '广州 Top10'],
-        textStyle: {
-            color: '#fff'
-        },
-        selectedMode: 'single'
-    },
     geo: {
         map: 'park',
         zoom: 1.2,
@@ -96,7 +119,7 @@ option = {
                 show: false
             }
         },
-        roam: true,
+        //roam: true,
         itemStyle: {
             normal: {
                 areaColor: '#142957',
